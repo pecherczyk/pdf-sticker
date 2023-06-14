@@ -1,0 +1,33 @@
+/* @media print {
+
+  form {
+    
+  }
+
+  body {
+    font-family: 'Courier New', Courier, monospace;
+  }
+} */
+
+/* @page {
+  size: 100mm 24mm;
+} */
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+canvas {
+  display: block;
+}
+
+/* .hidden {
+  display: none;
+} */

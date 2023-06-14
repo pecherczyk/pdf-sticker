@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://kit.fontawesome.com/864dcc05b6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Sticker ver.1</title>
+</head>
+<body>
+<br>
+  <!-- Error file load modal -->
+  <div id="error-modal" class="modal">
+    <div class="modal-background"></div>
+    <div id="error-notification" class="notification is-danger">
+      <button id="error-modal-button" class="delete"></button>
+       <strong>Błąd!</strong><br>Zły format pliku! Wymagany plik CSV!<br>
+       Podano: <span id="error-message"></span>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column is-one-third"></div>
+    <div class="column is-one-third">
+      <div class="box content">
+        <h1>PDF Sticker</h1>
+        <p>Generator naklejek z QR kodem numeru inwentarzowego w formacie PDF dla drukarki Brother P700</p>
+        <div id="file-form" class="file column is-boxed is-primary">
+          <label class="file-label">
+            <input id="file-upload" class="file-input" type="file" name="resume">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fas fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Wgraj plik CSV
+              </span>
+            </span>
+          </label>
+        </div>
+      </div>
+        <div class="columns">
+
+        </div>
+        <div id="download-button"></div>
+    </div>
+    <div class="column is-one-third">
+      <article class="message is-info" id="file-info">
+        <div class="message-header">
+          Wymagania dotyczące pliku
+          <button class="delete" id="delete-button"></button>
+        </div>
+        <div class="message-body">
+          Uwaga! Wgrywany plik CSV musi mieć odpowiednią strukturę! Plik nie może mieć pustych linii
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column is-one-third"></div>
+    <div class="column is-one-third">
+      <div id="qrcode-list"></div>
+    </div>
+    <div class="column is-one-third"></div>
+  </div>
+</body>
+</html>
